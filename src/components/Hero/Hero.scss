@@ -1,0 +1,75 @@
+.hero {
+    min-height: 100vh;
+    padding-top: clamp(0em, 5vw, 5em);
+    @media (max-width: 577px) {
+        min-height: 90vh;
+    }
+    @media (min-height: 1000px) {
+        padding-block: 20em;
+    }
+    .hero--container {
+        width: min(90%, 800px);
+        margin: auto;
+        margin-top: 3em;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2,minmax(300px,1fr));
+        justify-content: center;
+        align-content: center;
+        @media (max-width: 577px) {
+            display: block;
+            margin-top: 8em;
+            text-align: center;
+        }
+        .description {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1em;
+            h1 {
+                font-size: clamp(2.5rem, 8vw, 4.5rem);
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            h2 {
+                font-size: clamp(1rem, 6vw, 1.5rem);
+                text-transform: uppercase;
+                word-spacing: .4em;
+            }
+            span {
+                color: #741f71 ;
+            }
+            p {
+                font-size: clamp(1rem, 1vw, 1.2rem);
+                font-weight: 100;
+            }
+            button {
+                color: inherit;
+                border-radius: 50px;
+                border: none;
+                cursor: pointer;
+                background-image: linear-gradient(to right,#42A6E3,#FF56F6 );
+                &:hover {
+                    background-image: linear-gradient(to left,#42A6E3,#FF56F6 );
+                }
+                &:last-child {
+                    background-clip: text;
+                    color: transparent;
+                }
+            }
+            a {
+                display: inline-block;
+                color: white;
+                padding: 1rem;
+            }
+        }
+        img {
+            justify-self: center;
+            height: 20rem;
+            border-radius: 250% 180% 350% 80% / 100% 140% 150% 60%;
+            mix-blend-mode: lighten;
+            @media (max-width: 577px) {
+                display: none;
+            }
+        }
+    }
+}

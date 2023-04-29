@@ -1,0 +1,119 @@
+.work {
+  min-height: 150vh;
+  padding-block: 6em;
+}
+@media (min-height: 1000px) {
+  .work {
+    padding-block: 20em;
+  }
+}
+.work .work--container {
+  width: min(90%, 800px);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, 200px);
+  gap: 3em 2em;
+  place-items: center;
+  place-items: center;
+}
+@media (max-width: 765px) {
+  .work .work--container {
+    grid-template-columns: minmax(200px, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    justify-content: center;
+  }
+  .work .work--container .description {
+    text-align: center;
+  }
+  .work .work--container .description p {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 390px) {
+  .work .work--container {
+    grid-template-columns: 60px;
+    grid-template-rows: repeat(4, 200px);
+    justify-content: center;
+    gap: 3em 0;
+  }
+}
+.work .work--container .description {
+  min-width: 16rem;
+}
+.work .work--container .description h1 {
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #741f71;
+  margin-bottom: 1em;
+}
+.work .work--container .description p {
+  width: min(90%, 30rem);
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  font-weight: 100;
+  margin-bottom: 1em;
+}
+.work .work--container .description button {
+  color: inherit;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #42A6E3, #FF56F6);
+}
+.work .work--container .description button:hover {
+  background-image: linear-gradient(to left, #42A6E3, #FF56F6);
+}
+.work .work--container .work--item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.work .work--container .work--item:hover .dd {
+  background-color: rgba(0, 0, 0, 0.677);
+}
+.work .work--container .work--item:hover .d {
+  bottom: 20%;
+}
+.work .work--container .work--item:hover img {
+  transform: scale(1.4) rotate(10deg);
+}
+.work .work--container .work--item img {
+  width: 22rem;
+  height: 13rem;
+  transition: all 0.6s;
+}
+@media (max-width: 390px) {
+  .work .work--container .work--item img {
+    width: 15rem;
+  }
+}
+.work .work--container .work--item h1 {
+  text-transform: uppercase;
+  font-size: clamp(0.8rem, 2vw, 1.4rem);
+}
+.work .work--container .work--item h2 {
+  text-transform: uppercase;
+  padding-bottom: 1em;
+}
+.work .work--container .work--item p {
+  font-size: clamp(0.6rem, 2vw, 1rem);
+  background-image: linear-gradient(to left, #42A6E3, #FF56F6);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.work .work--container .work--item .dd {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+}
+.work .work--container .work--item .d {
+  position: absolute;
+  bottom: -100%;
+  left: 5%;
+  z-index: 50;
+  transition: all 0.3s;
+}/*# sourceMappingURL=Work.css.map */

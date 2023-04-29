@@ -1,0 +1,83 @@
+.contact {
+  min-height: 100vh;
+  padding-block: 3em;
+}
+@media (max-width: 577px) {
+  .contact {
+    min-height: 90vh;
+  }
+}
+@media (min-height: 1000px) {
+  .contact {
+    padding-block: 20em;
+  }
+}
+.contact .contact--container {
+  width: min(90%, 800px);
+  margin: auto;
+  margin-top: 3em;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  justify-content: center;
+  align-content: center;
+}
+@media (max-width: 615px) {
+  .contact .contact--container {
+    display: block;
+    margin-top: 8em;
+    text-align: center;
+  }
+}
+.contact .contact--container .description {
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact--container .description h1 {
+  font-size: clamp(1.3rem, 4vw, 2.5rem);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.contact .contact--container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2em;
+  color: white;
+}
+.contact .contact--container form input, .contact .contact--container form textarea {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 2em 1em;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+.contact .contact--container form input::-moz-placeholder, .contact .contact--container form textarea::-moz-placeholder {
+  text-transform: capitalize;
+  font-family: "Rajdhani", sans-serif;
+  color: inherit;
+}
+.contact .contact--container form input::placeholder, .contact .contact--container form textarea::placeholder {
+  text-transform: capitalize;
+  font-family: "Rajdhani", sans-serif;
+  color: inherit;
+}
+.contact .contact--container form input:focus, .contact .contact--container form textarea:focus {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3647058824);
+  outline: none;
+}
+.contact .contact--container form a {
+  text-decoration: none;
+  color: inherit;
+}
+.contact .contact--container form button {
+  color: inherit;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #42A6E3, #FF56F6);
+}
+.contact .contact--container form button:hover {
+  background-image: linear-gradient(to left, #42A6E3, #FF56F6);
+}/*# sourceMappingURL=Contact.css.map */
